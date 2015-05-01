@@ -11,6 +11,7 @@ RUN sudo wget -qO- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSIO
 
 RUN source ~/.nvm/nvm.sh \
     && nvm install ${NODEJS_VERSION} \
+    && nvm alias default ${NODEJS_VERSION} \
     && npm install -g bower@${BOWER_VERSION} grunt-cli@${GRUNT_VERSION} yo@${YO_VERSION}
 
 COPY ./config/. /config/

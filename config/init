@@ -2,7 +2,7 @@ source /config/init-curl
 source /config/init-git
 
 source ~/.nvm/nvm.sh
-nvm use stable >/dev/null
+nvm use ${NODEJS_VERSION} >/dev/null
 
 source /config/init-npm
 source /config/init-bower
