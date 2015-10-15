@@ -1,4 +1,4 @@
-FROM xpfriend/jenkins-slave-base:1.2.1
+FROM xpfriend/jenkins-slave-base:1.3.0
 MAINTAINER ototadana@gmail.com
 
 ENV NVM_VERSION v0.29.0
