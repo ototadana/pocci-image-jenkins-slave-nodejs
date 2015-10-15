@@ -1,4 +1,4 @@
-FROM xpfriend/jenkins-slave-base:1.2.0
+FROM xpfriend/jenkins-slave-base:1.2.1
 MAINTAINER ototadana@gmail.com
 
 ENV NVM_VERSION v0.29.0
@@ -17,5 +17,3 @@ RUN source ~/.nvm/nvm.sh \
 COPY ./config/. /config/
 RUN sudo chown -R jenkins:jenkins /config
 RUN chmod +x /config/*
-
-ENV NODE_NAME nodejs
