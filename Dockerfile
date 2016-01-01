@@ -1,4 +1,4 @@
-FROM xpfriend/jenkins-slave-base:1.5.0
+FROM xpfriend/workspace-base:2.0.0
 MAINTAINER ototadana@gmail.com
 
 ENV NVM_VERSION v0.29.0
@@ -14,7 +14,8 @@ RUN source ~/.nvm/nvm.sh \
     && nvm install ${NODEJS_VERSION} \
     && nvm alias default ${NODEJS_VERSION} \
     && npm install -g bower@${BOWER_VERSION} grunt-cli@${GRUNT_VERSION} gulp@${GULP_VERSION} yo@${YO_VERSION}
+RUN sudo ln -s ~/.nvm/nvm.sh /etc/profile.d/nvm.sh
 
 COPY ./config/. /config/
-RUN sudo chown -R jenkins:jenkins /config
+RUN sudo chown -R owner:owner /config
 RUN chmod +x /config/*
