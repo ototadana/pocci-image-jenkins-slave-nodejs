@@ -1,12 +1,12 @@
-FROM xpfriend/workspace-base:2.0.0
+FROM xpfriend/workspace-base:2.1.0
 MAINTAINER ototadana@gmail.com
 
 ENV NVM_VERSION v0.29.0
-ENV NODEJS_VERSION v4.2.3
-ENV BOWER_VERSION 1.7.1
+ENV NODEJS_VERSION v4.2.6
+ENV BOWER_VERSION 1.7.7
 ENV GRUNT_VERSION 0.1.13
 ENV GULP_VERSION 3.9.0
-ENV YO_VERSION 1.5.0
+ENV YO_VERSION 1.6.0
 
 RUN sudo wget -qO- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | bash
 
