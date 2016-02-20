@@ -1,8 +1,6 @@
-source /config/init-curl
-source /config/init-git
-
 source ~/.nvm/nvm.sh
 nvm use ${NODEJS_VERSION} >/dev/null
 
-source /config/init-npm
-source /config/init-bower
+for i in `find /config/ -name init-*`; do
+    source $i
+done
