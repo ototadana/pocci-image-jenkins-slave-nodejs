@@ -6,7 +6,7 @@ ENV NODEJS_VERSION v4.4.4
 ENV BOWER_VERSION 1.7.9
 ENV GRUNT_VERSION 1.2.0
 ENV GULP_VERSION 3.9.1
-ENV YO_VERSION 1.8.1
+ENV YO_VERSION 1.8.3
 
 RUN sudo wget -qO- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | bash
 
