@@ -1,7 +1,7 @@
-FROM xpfriend/workspace-base:3.0.0
+FROM xpfriend/workspace-base:3.1.0
 MAINTAINER ototadana@gmail.com
 
-ENV NVM_VERSION v0.31.2
+ENV NVM_VERSION v0.31.3
 ENV NODEJS_VERSION v4.4.7
 ENV BOWER_VERSION 1.7.9
 ENV GRUNT_VERSION 1.2.0
