@@ -8,3 +8,4 @@ Pocci workspace container for [Node.js](http://nodejs.org/) applications.
 *   [gulp](https://github.com/gulpjs/gulp)
 *   [Bower](http://bower.io/)
 *   [Yeoman](http://yeoman.io/)
+*   [Yarn](https://yarnpkg.com/)
