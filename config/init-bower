@@ -1,13 +1,19 @@
-if [ -f ~/.bowerrc ]; then
-    return
-fi
-
 echo "{" >~/.bowerrc
-if [ -n "${http_proxy}" ]; then
-    echo "\"strict-ssl\": false," >>~/.bowerrc
-    echo "\"proxy\": \"${http_proxy}\"," >>~/.bowerrc
-    if [ -n "${https_proxy}" ]; then
-      echo "\"https-proxy\": \"${https_proxy}\"," >>~/.bowerrc
+if [ -n "${BOWER_REGISTRY_URL}" ]; then
+    echo "\"registry\": {" >>~/.bowerrc
+    echo "    \"search\" : [ \"${BOWER_REGISTRY_URL}\" ]" >>~/.bowerrc
+    echo "}," >>~/.bowerrc
+    if [ -n "${BOWER_PRIVATE_REGISTRY_URL}" ]; then
+        echo "\"register\" : \"${BOWER_PRIVATE_REGISTRY_URL}\"," >>~/.bowerrc
+        echo "\"resolvers\" : [ \"bower-nexus3-resolver\" ]," >>~/.bowerrc
+    fi
+else
+    if [ -n "${http_proxy}" ]; then
+        echo "\"strict-ssl\": false," >>~/.bowerrc
+        echo "\"proxy\": \"${http_proxy}\"," >>~/.bowerrc
+        if [ -n "${https_proxy}" ]; then
+          echo "\"https-proxy\": \"${https_proxy}\"," >>~/.bowerrc
+        fi
     fi
 fi
 echo "\"analytics\": false" >>~/.bowerrc
