@@ -3,10 +3,7 @@ if [ -n "${BOWER_REGISTRY_URL}" ]; then
     echo "\"registry\": {" >>~/.bowerrc
     echo "    \"search\" : [ \"${BOWER_REGISTRY_URL}\" ]" >>~/.bowerrc
     echo "}," >>~/.bowerrc
-    if [ -n "${BOWER_PRIVATE_REGISTRY_URL}" ]; then
-        echo "\"register\" : \"${BOWER_PRIVATE_REGISTRY_URL}\"," >>~/.bowerrc
-        echo "\"resolvers\" : [ \"bower-nexus3-resolver\" ]," >>~/.bowerrc
-    fi
+    echo "\"resolvers\" : [ \"bower-nexus3-resolver\" ]," >>~/.bowerrc
 else
     if [ -n "${http_proxy}" ]; then
         echo "\"strict-ssl\": false," >>~/.bowerrc
