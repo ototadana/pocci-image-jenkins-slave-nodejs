@@ -1,4 +1,4 @@
-FROM xpfriend/workspace-base:3.18.0
+FROM xpfriend/workspace-base:3.19.0
 MAINTAINER ototadana@gmail.com
 
 ENV NVM_VERSION v0.33.1
